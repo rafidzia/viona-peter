@@ -76,6 +76,8 @@ button {
 
 #c-1 {
     background-image: url("res/1.\ opening.png");
+    background-position: center -50px;
+    background-repeat: no-repeat;
 }
 .title-top {
     margin-top: 10rem;
@@ -122,6 +124,10 @@ button {
     border-radius: 100%;
     margin-bottom: 1rem;
 }
+.opening-img > div > img {
+    border-radius: 100%;
+    max-height:270px;
+}
 .opening-1 {
     font-size: 2rem;
     font-family: "Alex Brush";
@@ -140,7 +146,7 @@ button {
 }
 
 .opening-3 div:nth-child(1) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: "Amiri Quran";
     margin: 1rem;
 }

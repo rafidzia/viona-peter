@@ -14,7 +14,9 @@ AOS.init({
     duration: 1200, // values from 0 to 3000, with step 50ms
 });
 
-document.getElementById('cover').style.display = 'none';
+window.onload = function () {
+    document.getElementById('cover').style.display = 'none';
+}
 
 
 countdown(new Date("Feb 3, 2024 13:00:00").getTime(), ([days, hours, minutes, seconds]) => {

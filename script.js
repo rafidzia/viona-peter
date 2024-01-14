@@ -14,10 +14,6 @@ AOS.init({
     duration: 1200, // values from 0 to 3000, with step 50ms
 });
 
-window.onload = function () {
-    document.getElementById('cover').style.display = 'none';
-}
-
 
 countdown(new Date("Feb 3, 2024 13:00:00").getTime(), ([days, hours, minutes, seconds]) => {
     // document.getElementById('countdown').innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
@@ -34,3 +30,5 @@ document.getElementById("title-btn").addEventListener("click", function () {
         frame.scrollTo(0, window.innerHeight);
     }, 500)
 })
+
+document.getElementById('cover').style.display = 'none';

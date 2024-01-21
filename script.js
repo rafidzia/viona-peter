@@ -6,15 +6,20 @@ let lastScroll = 0
 let statusScroll = "down"
 frame.onscroll = function (e) {
     // console.log(e)
-    if(statusScroll == "down" && frame.scrollTop < lastScroll){
+    // if(Math.abs(frame.scrollTop - lastScroll) > 500) {
+    //     if(statusScroll == "down" && frame.scrollTop < lastScroll){
+    //         return
+    //     } else if (statusScroll == "up" && frame.scrollTop > lastScroll){
+    //         return
+    //     }
+    // }
+    // if (frame.scrollTop > lastScroll) {
+    //     statusScroll = "down"
+    // } else if (frame.scrollTop < lastScroll) {
+    //     statusScroll = "up"
+    // }
+    if(frame.scrollTop < lastScroll) {
         return
-    } else if (statusScroll == "up" && frame.scrollTop > lastScroll){
-        return
-    }
-    if (frame.scrollTop > lastScroll) {
-        statusScroll = "down"
-    } else if (frame.scrollTop < lastScroll) {
-        statusScroll = "up"
     }
     console.log(frame.scrollTop)
     window.scroll(0, frame.scrollTop);

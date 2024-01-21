@@ -6,6 +6,10 @@ frame.onscroll = function () {
     window.scroll(0, frame.scrollTop);
 }
 
+window.onresize = function () {
+    body[0].style.height = contents.length * window.innerHeight + "px"
+}
+
 // frame.addEventListener('click', function () {
 //     requestFullScreen(frame);
 // })

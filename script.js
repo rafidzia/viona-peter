@@ -15,6 +15,7 @@ AOS.init({
 });
 
 
+
 countdown(new Date("Feb 3, 2024 13:00:00").getTime(), ([days, hours, minutes, seconds]) => {
     // document.getElementById('countdown').innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
     document.getElementById("days").innerHTML = days;
@@ -30,5 +31,13 @@ document.getElementById("title-btn").addEventListener("click", function () {
         frame.scrollTo(0, window.innerHeight);
     }, 500)
 })
+
+let recipient = getQueryVariable("to")
+
+if (recipient.length > 0) {
+    recipient = recipient.replaceAll("+", " ");
+    recipient = recipient.replaceAll("%20", " ");
+    document.getElementById("recipient").innerHTML = recipient;
+}
 
 document.getElementById('cover').style.display = 'none';

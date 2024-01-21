@@ -2,8 +2,23 @@ const frame = document.getElementById('frame');
 const body = document.getElementsByTagName('body');
 const contents = document.getElementsByClassName('content');
 body[0].style.height = contents.length * window.innerHeight + "px"
-frame.onscroll = function () {
+let lastScroll = 0
+let statusScroll = "down"
+frame.onscroll = function (e) {
+    // console.log(e)
+    if(statusScroll == "down" && frame.scrollTop < lastScroll){
+        return
+    } else if (statusScroll == "up" && frame.scrollTop > lastScroll){
+        return
+    }
+    if (frame.scrollTop > lastScroll) {
+        statusScroll = "down"
+    } else if (frame.scrollTop < lastScroll) {
+        statusScroll = "up"
+    }
+    console.log(frame.scrollTop)
     window.scroll(0, frame.scrollTop);
+    lastScroll = frame.scrollTop
 }
 
 window.onresize = function () {

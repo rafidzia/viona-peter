@@ -38,35 +38,6 @@ AOS.init({
     duration: 1200, // values from 0 to 3000, with step 50ms
 });
 
-
-
-countdown(new Date("Feb 3, 2024 13:00:00").getTime(), ([days, hours, minutes, seconds]) => {
-    // document.getElementById('countdown').innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
-});
-
-
-document.getElementById("title-btn").addEventListener("click", function () {
-    requestFullScreen(frame);
-    setTimeout(() => {
-        frame.scrollTo(0, window.innerHeight);
-    }, 500)
-})
-
-let recipient = getQueryVariable("to")
-
-if (recipient.length > 0) {
-    recipient = recipient.replaceAll("+", " ");
-    recipient = recipient.replaceAll("%20", " ");
-    document.getElementById("recipient").innerHTML = recipient;
-}
-
-document.getElementById('cover').style.display = 'none';
-
-
 const audio = document.getElementById("audio")
 const toggle = document.getElementById("toggle")
 
@@ -87,6 +58,31 @@ toggle.addEventListener("click", function () {
 })
 
 
-setTimeout(() => {
+countdown(new Date("Feb 3, 2024 13:00:00").getTime(), ([days, hours, minutes, seconds]) => {
+    // document.getElementById('countdown').innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+});
+
+
+document.getElementById("title-btn").addEventListener("click", function () {
     audio.play()
-}, 2000)
+    requestFullScreen(frame);
+    setTimeout(() => {
+        frame.scrollTo(0, window.innerHeight);
+    }, 500)
+})
+
+let recipient = getQueryVariable("to")
+
+if (recipient.length > 0) {
+    recipient = recipient.replaceAll("+", " ");
+    recipient = recipient.replaceAll("%20", " ");
+    document.getElementById("recipient").innerHTML = recipient;
+}
+
+document.getElementById('cover').style.display = 'none';
+
+

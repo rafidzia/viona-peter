@@ -87,5 +87,6 @@ toggle.addEventListener("click", function () {
 })
 
 
-
-audio.play()
+setTimeout(() => {
+    audio.play()
+}, 2000)

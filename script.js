@@ -65,3 +65,27 @@ if (recipient.length > 0) {
 }
 
 document.getElementById('cover').style.display = 'none';
+
+
+const audio = document.getElementById("audio")
+const toggle = document.getElementById("toggle")
+
+let muted = false
+
+audio.volume = 0.3
+
+toggle.addEventListener("click", function () {
+    if(!muted){
+        audio.pause()
+        muted = true
+        toggle.children[0].src = "./res/mute.png"
+    }else{
+        audio.play()
+        muted = false
+        toggle.children[0].src = "./res/volume.png"
+    }
+})
+
+
+
+audio.play()

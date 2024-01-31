@@ -79,7 +79,7 @@ let recipient = getQueryVariable("to")
 
 if (recipient.length > 0) {
     recipient = recipient.replaceAll("+", " ");
-    recipient = recipient.replaceAll("%20", " ");
+    recipient = decodeURIComponent(recipient);
     document.getElementById("recipient").innerHTML = recipient;
 }
 

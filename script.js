@@ -2,8 +2,8 @@ const frame = document.getElementById('frame');
 const body = document.getElementsByTagName('body');
 const contents = document.getElementsByClassName('content');
 body[0].style.height = contents.length * window.innerHeight + "px"
-let lastScroll = 0
-let statusScroll = "down"
+// let lastScroll = 0
+// let statusScroll = "down"
 frame.onscroll = function (e) {
     // console.log(e)
     // if(Math.abs(frame.scrollTop - lastScroll) > 500) {
@@ -18,12 +18,12 @@ frame.onscroll = function (e) {
     // } else if (frame.scrollTop < lastScroll) {
     //     statusScroll = "up"
     // }
-    if(frame.scrollTop < lastScroll) {
-        return
-    }
-    console.log(frame.scrollTop)
+    // if(frame.scrollTop < lastScroll) {
+    //     return
+    // }
+    // console.log(frame.scrollTop)
     window.scroll(0, frame.scrollTop);
-    lastScroll = frame.scrollTop
+    // lastScroll = frame.scrollTop
 }
 
 window.onresize = function () {
@@ -58,7 +58,7 @@ toggle.addEventListener("click", function () {
 })
 
 
-countdown(new Date("Feb 3, 2024 13:00:00").getTime(), ([days, hours, minutes, seconds]) => {
+countdown(new Date("Feb 3, 2024 12:30:00").getTime(), ([days, hours, minutes, seconds]) => {
     // document.getElementById('countdown').innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
     document.getElementById("days").innerHTML = days;
     document.getElementById("hours").innerHTML = hours;

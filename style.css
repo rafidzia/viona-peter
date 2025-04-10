@@ -7,25 +7,31 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    font-family: "Arima";
+    font-family: "Inter";
     overscroll-behavior: none;
     overflow: auto;
 
 }
 
-img {
+/* img {
     max-width: 300px;
-}
+} */
 
 button {
-    font-family: "Arima";
+    /* font-family: "Inter"; */
     font-size: 1rem;
     padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
+    border-radius: 2rem;
     border: none;
-    background-color: #144c77;
-    color: white;
+    background-color: white;
+    /* color: ; */
     cursor: pointer;
+}
+
+
+@font-face {
+    font-family: "Palace Script MT";
+    src: url("./res1/ps.ttf");
 }
 
 
@@ -39,7 +45,7 @@ button {
     padding: 3px;
     right:1rem;
     bottom: 1rem;
-    border: 1px solid #144c77;
+    border: 1px solid #444;
 }
 
 .vol-btn img {
@@ -51,12 +57,12 @@ button {
 }
 
 .button {
-    font-family: "Arima";
+    /* font-family: "Arima"; */
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     border: none;
-    background-color: #144c77;
+    background-color: #444;
     color: white;
     cursor: pointer;
     text-decoration: none;
@@ -71,11 +77,11 @@ button {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: #467fa1;
+    background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    /* color: white; */
 }
 
 .frame {
@@ -85,25 +91,300 @@ button {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+    overflow-x: hidden;
     /* overscroll-behavior-y: none; */
 }
 
-.content {
+.content, .inside-content {
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 100%;
     justify-content: center;
     align-items: center;
-    scroll-snap-align: start;
     background-size: cover;
     background-position: center;
     text-align: center;
 }
 
+.content {
+    scroll-snap-align: start;
+}
+
+
 ::-webkit-scrollbar {
     display: none;
 }
+
+.img-frame {
+    max-width: 10rem;
+    position: absolute;
+}
+
+.inknut {
+    font-family: "Inknut Antiqua";
+}
+
+.passions {
+    font-family: "Passions Conflict";
+}
+
+.palace {
+    font-family: "Palace Script MT";
+}
+
+.title {
+    color: white;
+}
+.title-0 {
+    font-size: 5rem;
+}
+.title-1 {
+    font-size: 4rem;
+}
+.title-2 {
+    font-size: 3rem;
+}
+
+#e-1 {
+    background-image: url("res1/bg_pict.jpg");
+}
+
+#e-1 > div {
+    background: rgba(50, 50, 50, 0.8);
+}
+
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+#countdown > div {
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 10rem;
+    /* color: white; */
+    font-family: "Arima";
+}
+
+#countdown > div > div:nth-child(1) {
+    font-size: 1.2rem;
+    margin-bottom: -0.5rem;
+    margin-top: 0.5rem;
+}
+
+.recipient {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: white;
+}
+.title-btn {
+    margin-top: 1rem;
+}
+
+#e-2 {
+    background-image: url("res1/bg_pageayat.png");
+}
+
+#e-2 > div {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 1rem;
+    width: 90%;
+    height: 90vh;
+}
+#e-2 > div > div {
+    font-size: 0.8rem;
+    margin: 0.8rem 1rem;
+}
+#e-2 > div> img {
+    height: 200px;
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+}
+#e-2 > div > div > div:nth-child(1) {
+    font-family: "Inknut Antiqua";
+}
+
+
+#e-3 {
+    background-color: #D9D9D9;
+}
+
+#e-3 .img-1 {
+    max-width: 300px;
+    border-radius: 100%;
+    box-shadow: 0 0 10px #000;
+}
+
+#e-3 > .text {
+    margin-top: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-family: "Arima";
+}
+
+#e-3 .img-frame-1 {
+    right: -5rem;
+    /* top:0; */
+}
+
+#e-3 .img-frame-2 {
+    left:-3rem;
+    bottom:0;
+}
+
+
+#e-4, #e-5 {
+    background-color: #D9D9D9;
+}
+
+#e-4 > div, #e-5 > div {
+    max-width: 300px;
+}
+
+#e-4 .img-1, #e-5 .img-1 {
+    max-height: 400px;
+}
+
+#e-4 .title-1, #e-5 .title-1 {
+    color:darkgoldenrod;
+    margin-left: -1.5rem;
+}
+
+#e-6 {
+    background-color: #D9D9D9;
+}
+
+#e-7, 
+#e-8,
+#e-9,
+#e-10
+{
+    background-color: #D9D9D9;
+}
+#e-7 .img-1, 
+#e-8 .img-1,
+#e-9 .img-1,
+#e-10 .img-1
+{
+    max-width: 300px;
+}
+.btn-x {
+    position: absolute;
+    border-radius: 10rem;
+}
+
+#e-7 .btn-1 {
+    top:20.2rem;
+    left:38%;
+}
+#e-7 .btn-2 {
+    top: 27rem;
+    left:38%;
+}
+
+#e-8 .btn-1,
+#e-9 .btn-1,
+#e-10 .btn-1
+{
+    left:38%;
+    top: 21rem;
+}
+
+
+#e-11 a, #e-11 > div{
+    width: 80%;
+}
+
+#e-11 .inside-content
+{
+    background-color: #D9D9D9;
+    height: auto;
+    padding: 10rem 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px #000;
+    position: relative;
+}
+
+#e-11 .img-frame-1 {
+    right: -5rem;
+    top: -4rem;
+}
+
+#e-11 .img-frame-2 {
+    left: -3.5rem;
+    top: -4rem;
+}
+
+#e-12 > div {
+    width: 80%;
+}
+
+#e-12 .inside-content {
+    background-color: #D9D9D9;
+    height: auto;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px #000;
+    position: relative;
+}
+
+#e-12 .text {
+    font-size: 0.8rem;
+}
+
+#e-12 img {
+    max-width: 300px;
+    margin: 0.2rem 0;
+}
+
+#e-12 a {
+    position: absolute;
+}
+/* #e-12 .clone-1 {
+    top:18.5rem;
+    left:7rem;
+}
+#e-12 .clone-2 {
+    top:29.5rem;
+    left:7rem;
+}
+#e-12 .clone-3 {
+    top:43rem;
+    left:15.5rem;
+} */
+
+
+#e-13 {
+    background-image: url("res1/last.jpg");
+    background-position: -70px center ;
+    color: white;
+}
+
+#e-13 > div {
+    background: rgba(50, 50, 50, 0.8);
+}
+
+#e-13 > div > div {
+    width: 80%;
+}
+
+#e-13 .passions {
+    font-size: 5rem;
+}
+
+
+
+
+
+
+
+
 
 #c-1 {
     background-image: url("res/1.\ opening.png");
@@ -113,27 +394,15 @@ button {
 .title-top {
     margin-top: 10rem;
 }
-.title {
-    font-size: 6rem;
-}
-/* .title-name-1{
-    margin-top: 4rem;
-} */
+
+
 .title-and {
     font-family: "Clicker Script";
     line-height: 5rem;
     color: #144c77;
 }
-.title-name {
-    font-family: "Alex Brush";
-    color: #144c77;
-}
-.recipient {
-    font-size: 1.2rem;
-}
-.title-btn {
-    margin-top: 1.5rem;
-}
+
+
 
 #c-2 {
     background-image: url("res/2.\ salam\ pembuka.png");
@@ -227,27 +496,7 @@ button {
     margin-bottom: 2rem;
 }
 
-#countdown {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
 
-#countdown > div {
-    height: 70px;
-    width: 70px;
-    background-color: #144c77;
-    color: white;
-}
-
-#countdown > div > div:nth-child(1) {
-    font-size: 1.5rem;
-    font-family: "Arima";
-    margin-bottom: -0.5rem;
-    margin-top: 0.5rem;
-}
 
 #c-8 {
     background-image: url("res/7.\ lokasi.png");
@@ -320,5 +569,19 @@ button {
 @media screen and (max-width: 720px) {
     #c-3 > div {
         max-width: 360px;
+    }
+}
+
+
+@media screen and (max-height: 720px) {
+    #e-2 > div > div {
+        font-size: 0.6rem;
+        margin: 0.6rem 1rem;
+    }
+    #e-2 > div> img {
+        height: 150px;
+    }
+    #e-12 img {
+        max-height: 120px;
     }
 }

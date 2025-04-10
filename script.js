@@ -2,6 +2,17 @@ const frame = document.getElementById('frame');
 const body = document.getElementsByTagName('body');
 const contents = document.getElementsByClassName('content');
 body[0].style.height = contents.length * window.innerHeight + "px"
+
+const dueDate = new Date("May 2, 2025 08:00:00")
+
+countdown(dueDate.getTime(), ([days, hours, minutes, seconds]) => {
+    // document.getElementById('countdown').innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+});
+
 // let lastScroll = 0
 // let statusScroll = "down"
 frame.onscroll = function (e) {
@@ -58,15 +69,6 @@ toggle.addEventListener("click", function () {
 })
 
 
-countdown(new Date("Feb 3, 2024 12:30:00").getTime(), ([days, hours, minutes, seconds]) => {
-    // document.getElementById('countdown').innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
-});
-
-
 document.getElementById("title-btn").addEventListener("click", function () {
     audio.play()
     requestFullScreen(frame);
@@ -83,6 +85,8 @@ if (recipient.length > 0) {
     document.getElementById("recipient").innerHTML = recipient;
 }
 
-document.getElementById('cover').style.display = 'none';
+if (document.getElementById('cover')) {
+    document.getElementById('cover').style.display = 'none';
+}
 
 

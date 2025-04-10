@@ -10,7 +10,7 @@ body {
     font-family: "Inter";
     overscroll-behavior: none;
     overflow: auto;
-
+    background-color: white;
 }
 
 /* img {
@@ -107,9 +107,9 @@ button {
     text-align: center;
 }
 
-.content {
+/* .content {
     scroll-snap-align: start;
-}
+} */
 
 
 ::-webkit-scrollbar {

@@ -85,6 +85,23 @@ if (recipient.length > 0) {
     document.getElementById("recipient").innerHTML = recipient;
 }
 
+const copy1 = document.getElementById("clone-1")
+const copy2 = document.getElementById("clone-2")
+const copy3 = document.getElementById("clone-3")
+copy1.addEventListener("click", function () {
+    navigator.clipboard.writeText("901125082388")
+    alert("Nomor Rekening 901125082388 telah disalin ke clipboard")
+}) 
+copy2.addEventListener("click", function () {
+    navigator.clipboard.writeText("5050069763")
+    alert("Nomor Rekening 5050069763 telah disalin ke clipboard")
+})
+copy3.addEventListener("click", function () {
+    navigator.clipboard.writeText("Apartemen Puri Park View, tower C blok CB16/09, Kembangan, Kedoya Selatan, Jakarta Barat")
+    alert("Alamat telah disalin ke clipboard")
+})
+
+
 if (document.getElementById('cover')) {
     document.getElementById('cover').style.display = 'none';
 }

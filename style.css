@@ -1,4 +1,4 @@
-html{
+html {
     height: 100%;
     overflow: hidden;
 }
@@ -28,12 +28,10 @@ button {
     cursor: pointer;
 }
 
-
 @font-face {
     font-family: "Palace Script MT";
     src: url("./res1/ps.ttf");
 }
-
 
 .vol-btn {
     position: fixed;
@@ -43,7 +41,7 @@ button {
     width: 25px;
     height: 25px;
     padding: 3px;
-    right:1rem;
+    right: 1rem;
     bottom: 1rem;
     border: 1px solid #444;
 }
@@ -52,7 +50,7 @@ button {
     max-width: 25px;
 }
 
-.quran { 
+.quran {
     font-family: "Amiri Quran";
 }
 
@@ -95,7 +93,8 @@ button {
     /* overscroll-behavior-y: none; */
 }
 
-.content, .inside-content {
+.content,
+.inside-content {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -110,7 +109,6 @@ button {
 /* .content {
     scroll-snap-align: start;
 } */
-
 
 ::-webkit-scrollbar {
     display: none;
@@ -153,7 +151,6 @@ button {
 #e-1 > div {
     background: rgba(50, 50, 50, 0.8);
 }
-
 
 #countdown {
     display: flex;
@@ -201,7 +198,7 @@ button {
     font-size: 0.8rem;
     margin: 0.8rem 1rem;
 }
-#e-2 > div> img {
+#e-2 > div > img {
     height: 200px;
     margin-top: -2rem;
     margin-bottom: -2rem;
@@ -210,9 +207,8 @@ button {
     font-family: "Inknut Antiqua";
 }
 
-
 #e-3 {
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
 }
 
 #e-3 .img-1 {
@@ -234,44 +230,48 @@ button {
 }
 
 #e-3 .img-frame-2 {
-    left:-3rem;
-    bottom:0;
+    left: -3rem;
+    bottom: 0;
 }
 
-
-#e-4, #e-5 {
-    background-color: #D9D9D9;
+#e-4,
+#e-5 {
+    background-color: #d9d9d9;
+    height: auto;
 }
 
-#e-4 > div, #e-5 > div {
+#e-4 > div,
+#e-5 > div {
     max-width: 300px;
 }
 
-#e-4 .img-1, #e-5 .img-1 {
+#e-4 .img-1,
+#e-5 .img-1 {
     max-height: 400px;
 }
 
-#e-4 .title-1, #e-5 .title-1 {
-    color:darkgoldenrod;
+#e-4 .title-1,
+#e-5 .title-1 {
+    color: darkgoldenrod;
     margin-left: -1.5rem;
 }
 
 #e-6 {
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
+    height: auto;
 }
 
-#e-7, 
+#e-7,
 #e-8,
 #e-9,
-#e-10
-{
-    background-color: #D9D9D9;
+#e-10 {
+    background-color: #d9d9d9;
+    height: auto;
 }
-#e-7 .img-1, 
+#e-7 .img-1,
 #e-8 .img-1,
 #e-9 .img-1,
-#e-10 .img-1
-{
+#e-10 .img-1 {
     max-width: 300px;
 }
 .btn-x {
@@ -280,30 +280,39 @@ button {
 }
 
 #e-7 .btn-1 {
-    top:20.2rem;
-    left:38%;
+    top: 20.2rem;
+    left: 38%;
 }
 #e-7 .btn-2 {
     top: 27rem;
-    left:38%;
+    left: 38%;
 }
 
-#e-8 .btn-1,
-#e-9 .btn-1,
-#e-10 .btn-1
-{
-    left:38%;
+#e-7 .btn-3 {
+    left: 38%;
     top: 21rem;
 }
 
+#e-8 .btn-3,
+#e-9 .btn-3,
+#e-10 .btn-3 {
+    left: 38%;
+    top: 21rem;
+}
 
-#e-11 a, #e-11 > div{
+#e-11 {
+    height: auto;
+    padding-top: 5rem;
+    background-color: white;
+}
+
+#e-11 a,
+#e-11 > div {
     width: 80%;
 }
 
-#e-11 .inside-content
-{
-    background-color: #D9D9D9;
+#e-11 .inside-content {
+    background-color: #d9d9d9;
     height: auto;
     padding: 10rem 1rem;
     border-radius: 2rem;
@@ -321,12 +330,18 @@ button {
     top: -4rem;
 }
 
+#e-12 {
+    height: auto;
+    padding-top: 5rem;
+    background-color: white;
+}
+
 #e-12 > div {
     width: 80%;
 }
 
 #e-12 .inside-content {
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
     height: auto;
     padding: 1rem;
     border-radius: 2rem;
@@ -347,24 +362,23 @@ button {
     position: absolute;
 }
 #e-12 #clone-1 {
-    top:5.5rem;
-    left:5.5rem;
+    top: 5.5rem;
+    left: 5.5rem;
     z-index: 10;
 }
 #e-12 #clone-2 {
-    top:5.5rem;
-    left:5.5rem;
+    top: 5.5rem;
+    left: 5.5rem;
     z-index: 10;
 }
 #e-12 #clone-3 {
-    top:8rem;
-    left:14rem;
+    top: 8rem;
+    left: 14rem;
 }
-
 
 #e-13 {
     background-image: url("res1/last.jpg");
-    background-position: -70px center ;
+    background-position: -70px center;
     color: white;
 }
 
@@ -380,14 +394,6 @@ button {
     font-size: 5rem;
 }
 
-
-
-
-
-
-
-
-
 #c-1 {
     background-image: url("res/1.\ opening.png");
     background-position: center -50px;
@@ -397,14 +403,11 @@ button {
     margin-top: 10rem;
 }
 
-
 .title-and {
     font-family: "Clicker Script";
     line-height: 5rem;
     color: #144c77;
 }
-
-
 
 #c-2 {
     background-image: url("res/2.\ salam\ pembuka.png");
@@ -428,7 +431,7 @@ button {
 }
 .opening-img > div > img {
     border-radius: 100%;
-    max-height:270px;
+    max-height: 270px;
 }
 .opening-1 {
     font-size: 2rem;
@@ -498,8 +501,6 @@ button {
     margin-bottom: 2rem;
 }
 
-
-
 #c-8 {
     background-image: url("res/7.\ lokasi.png");
 }
@@ -530,7 +531,6 @@ button {
     margin-top: 1rem;
     font-size: 3rem;
 }
-
 
 #c-10 {
     background-image: url("res/6.\ jadwal\ akad.png");
@@ -574,16 +574,12 @@ button {
     }
 }
 
-
 @media screen and (max-height: 720px) {
     #e-2 > div > div {
         font-size: 0.6rem;
         margin: 0.6rem 1rem;
     }
-    #e-2 > div> img {
+    #e-2 > div > img {
         height: 150px;
-    }
-    #e-12 img {
-        max-height: 120px;
     }
 }

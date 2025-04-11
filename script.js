@@ -5,6 +5,33 @@ body[0].style.height = contents.length * window.innerHeight + "px"
 
 const dueDate = new Date("May 2, 2025 08:00:00")
 
+
+function disableScroll() {
+    // Get the current page scroll position
+    scrollTop =
+        frame.pageYOffset 
+        // ||
+        // document.documentElement.scrollTop;
+    scrollLeft =
+        frame.pageXOffset 
+        // ||
+        // document.documentElement.scrollLeft,
+
+        // if any scroll is attempted,
+        // set this to the previous value
+        frame.onscroll = function () {
+            frame.scrollTo(scrollLeft, scrollTop);
+        };
+}
+
+function enableScroll() {
+    frame.onscroll = function(e) {
+        window.scroll(0, frame.scrollTop);
+    }
+}
+
+disableScroll()
+
 countdown(dueDate.getTime(), ([days, hours, minutes, seconds]) => {
     // document.getElementById('countdown').innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
     document.getElementById("days").innerHTML = days;
@@ -15,27 +42,28 @@ countdown(dueDate.getTime(), ([days, hours, minutes, seconds]) => {
 
 // let lastScroll = 0
 // let statusScroll = "down"
-frame.onscroll = function (e) {
-    // console.log(e)
-    // if(Math.abs(frame.scrollTop - lastScroll) > 500) {
-    //     if(statusScroll == "down" && frame.scrollTop < lastScroll){
-    //         return
-    //     } else if (statusScroll == "up" && frame.scrollTop > lastScroll){
-    //         return
-    //     }
-    // }
-    // if (frame.scrollTop > lastScroll) {
-    //     statusScroll = "down"
-    // } else if (frame.scrollTop < lastScroll) {
-    //     statusScroll = "up"
-    // }
-    // if(frame.scrollTop < lastScroll) {
-    //     return
-    // }
-    // console.log(frame.scrollTop)
-    window.scroll(0, frame.scrollTop);
-    // lastScroll = frame.scrollTop
-}
+// frame.onscroll = function (e) {
+//     // console.log(e)
+//     // if(Math.abs(frame.scrollTop - lastScroll) > 500) {
+//     //     if(statusScroll == "down" && frame.scrollTop < lastScroll){
+//     //         return
+//     //     } else if (statusScroll == "up" && frame.scrollTop > lastScroll){
+//     //         return
+//     //     }
+//     // }
+//     // if (frame.scrollTop > lastScroll) {
+//     //     statusScroll = "down"
+//     // } else if (frame.scrollTop < lastScroll) {
+//     //     statusScroll = "up"
+//     // }
+//     // if(frame.scrollTop < lastScroll) {
+//     //     return
+//     // }
+//     // console.log(frame.scrollTop)
+//     window.scroll(0, frame.scrollTop);
+//     console.log(frame.scrollTop)
+//     // lastScroll = frame.scrollTop
+// }
 
 window.onresize = function () {
     body[0].style.height = contents.length * window.innerHeight + "px"
@@ -70,6 +98,7 @@ toggle.addEventListener("click", function () {
 
 
 document.getElementById("title-btn").addEventListener("click", function () {
+    enableScroll()
     audio.play()
     requestFullScreen(frame);
     setTimeout(() => {
@@ -90,15 +119,15 @@ const copy2 = document.getElementById("clone-2")
 const copy3 = document.getElementById("clone-3")
 copy1.addEventListener("click", function () {
     navigator.clipboard.writeText("901125082388")
-    alert("Nomor Rekening 901125082388 telah disalin ke clipboard")
+    // alert("Nomor Rekening 901125082388 telah disalin ke clipboard")
 }) 
 copy2.addEventListener("click", function () {
     navigator.clipboard.writeText("5050069763")
-    alert("Nomor Rekening 5050069763 telah disalin ke clipboard")
+    // alert("Nomor Rekening 5050069763 telah disalin ke clipboard")
 })
 copy3.addEventListener("click", function () {
     navigator.clipboard.writeText("Apartemen Puri Park View, tower C blok CB16/09, Kembangan, Kedoya Selatan, Jakarta Barat")
-    alert("Alamat telah disalin ke clipboard")
+    // alert("Alamat telah disalin ke clipboard")
 })
 
 

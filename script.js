@@ -108,9 +108,9 @@ document.getElementById("title-btn").addEventListener("click", function () {
     requestFullScreen(frame);
     setTimeout(() => {
         frame.scrollTo(0, window.innerHeight);
-        setTimeout(() => {
-            disableScroll()
-        }, 1500);
+        // setTimeout(() => {
+        //     disableScroll()
+        // }, 1500);
         videoInit.play()
     }, 500)
 })

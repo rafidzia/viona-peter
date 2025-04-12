@@ -56,7 +56,7 @@ button {
 
 .button {
     /* font-family: "Arima"; */
-    font-size: 1rem;
+    font-size: 1rem;    
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     border: none;
@@ -90,6 +90,7 @@ button {
     /* scroll-snap-type: y mandatory; */
     overflow-y: scroll;
     overflow-x: hidden;
+    background-color: white;
     /* overscroll-behavior-y: none; */
 }
 
@@ -208,7 +209,10 @@ button {
 }
 
 #e-3 {
-    background-color: #d9d9d9;
+    background-color: rgba(217, 217, 217, 0.9);
+    height: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 #e-3 .img-1 {
@@ -236,8 +240,10 @@ button {
 
 #e-4,
 #e-5 {
-    background-color: #d9d9d9;
+    background-color: rgba(217, 217, 217, 0.9);
     height: auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 }
 
 #e-4 > div,
@@ -257,16 +263,20 @@ button {
 }
 
 #e-6 {
-    background-color: #d9d9d9;
+    background-color: rgba(217, 217, 217, 0.9);
     height: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 #e-7,
 #e-8,
 #e-9,
 #e-10 {
-    background-color: #d9d9d9;
+    background-color: rgba(217, 217, 217, 0.9);
     height: auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 }
 #e-7 .img-1,
 #e-8 .img-1,
@@ -303,7 +313,8 @@ button {
 #e-11 {
     height: auto;
     padding-top: 5rem;
-    background-color: white;
+    padding-bottom: 5rem;
+    background-color: rgba(217, 217, 217, 0.9);
 }
 
 #e-11 a,
@@ -333,7 +344,8 @@ button {
 #e-12 {
     height: auto;
     padding-top: 5rem;
-    background-color: white;
+    padding-bottom: 5rem;
+    background-color: rgba(217, 217, 217, 0.9);
 }
 
 #e-12 > div {
@@ -393,6 +405,116 @@ button {
 #e-13 .passions {
     font-size: 5rem;
 }
+
+#e-13 img {
+    width: 400px;
+}
+
+#e-13 .last-link {
+    text-decoration: none;
+    color:white;
+}
+#e-13 .last-link a {
+    font-weight: bold;
+}
+
+
+#video1 {
+    position: fixed;
+    top:0;
+    height: 100%;
+    z-index: -2;
+}
+
+#e-0 {
+    background-color: transparent;
+}
+
+#e-0 > img {
+    top:0;
+    height: 100%;
+    display: none;
+    /* position: fixed; */
+    z-index: -1;
+}
+
+#e-14 {
+    background-color: rgba(217, 217, 217, 0.9);
+    height: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#e-14 img {
+    width: 400px;
+}
+
+#e-14 .title-1 {
+    position: absolute;
+    top:9rem;
+    left:0;
+    right: 0;
+    color: white;
+}
+
+#e-14 .text {
+    position: absolute;
+    top:13rem;
+    margin: 0 3rem;
+    left:0;
+    right: 0;
+    color: white;
+}
+
+#e-14 .button {
+    background-color: white;
+    color: black;
+    position: absolute;
+    top:18rem;
+    left:0;
+    right: 0;
+    margin: 0 7rem;
+}
+
+
+#e-15 {
+    background-color: rgba(217, 217, 217, 0.9);
+    height: auto;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+
+
+#e-15 .container {
+    display: flex;
+    flex-direction: row;
+}
+#e-15 .column {
+    flex: 1;
+    padding: 10px 0px;
+    box-sizing: border-box;
+}
+
+#e-15 .column img {
+    margin-top:1rem;
+    width: 80%;
+    border-radius: 1rem;
+}
+#e-15 .col-right {
+    margin-left:-1.5rem;
+    margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 #c-1 {
     background-image: url("res/1.\ opening.png");

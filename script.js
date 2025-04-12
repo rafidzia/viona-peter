@@ -6,16 +6,19 @@ body[0].style.height = contents.length * window.innerHeight + "px"
 const dueDate = new Date("May 2, 2025 08:00:00")
 
 
+document.documentElement.scrollTop = 0
+document.documentElement.scrollLeft = 0
+
 function disableScroll() {
     // Get the current page scroll position
     scrollTop =
         frame.pageYOffset 
-        // ||
-        // document.documentElement.scrollTop;
+        ||
+        document.documentElement.scrollTop;
     scrollLeft =
         frame.pageXOffset 
-        // ||
-        // document.documentElement.scrollLeft,
+        ||
+        document.documentElement.scrollLeft,
 
         // if any scroll is attempted,
         // set this to the previous value
@@ -97,14 +100,33 @@ toggle.addEventListener("click", function () {
 })
 
 
+const videoInit = document.getElementById("video1")
+
 document.getElementById("title-btn").addEventListener("click", function () {
     enableScroll()
     audio.play()
     requestFullScreen(frame);
     setTimeout(() => {
         frame.scrollTo(0, window.innerHeight);
+        setTimeout(() => {
+            disableScroll()
+        }, 500);
+        videoInit.play()
     }, 500)
 })
+
+videoInit.onended = function () {
+    enableScroll()
+    document.getElementById("videopic").style.display = "block";
+    videoInit.src = "./res1/vid_loop.mp4"
+    videoInit.play()
+    videoInit.loop = true
+    setTimeout(() => {
+        frame.scrollTo(0, window.innerHeight + frame.scrollTop);
+    }, 1500)
+}
+
+
 
 let recipient = getQueryVariable("to")
 

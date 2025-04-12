@@ -127,7 +127,7 @@ videoInit.onended = function () {
     videoInit.play()
     videoInit.loop = true
     setTimeout(() => {
-        frame.scrollTo(0, window.innerHeight + frame.scrollTop);
+        frame.scrollTo(0, window.innerHeight + 100);
     }, 1500)
 }
 

@@ -153,8 +153,12 @@ copy3.addEventListener("click", function () {
 })
 
 
-if (document.getElementById('cover')) {
-    document.getElementById('cover').style.display = 'none';
-}
-
-
+// if (document.getElementById('cover')) {
+//     document.getElementById('cover').style.display = 'none';
+// }
+const x = setInterval(()=>{
+    if (document.readyState === "complete") {
+        clearInterval(x)
+        document.getElementById('cover').style.display = 'none';
+    }
+}, 100)

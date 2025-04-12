@@ -110,7 +110,7 @@ document.getElementById("title-btn").addEventListener("click", function () {
         frame.scrollTo(0, window.innerHeight);
         setTimeout(() => {
             disableScroll()
-        }, 500);
+        }, 1500);
         videoInit.play()
     }, 500)
 })

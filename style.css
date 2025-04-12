@@ -432,17 +432,22 @@ button {
 
 #e-0 > #videopic {
     /* top:0; */
-    bottom: 0;
     height: 100%;
-    width: 100%;
-    display: none;
+    /* display: none; */
     /* position: fixed; */
+    opacity: 0;
     z-index: -1;
     background-image: url("res1/vid_pic.png");
     /* background-repeat: no-repeat; */
     background-attachment: fixed;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+}
+
+@media screen and (max-width: 526px) {
+    #e-0 > #videopic {
+        background-size: cover;
+    }
 }
 
 #e-14 {

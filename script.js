@@ -101,6 +101,8 @@ toggle.addEventListener("click", function () {
 
 
 const videoInit = document.getElementById("video1")
+const videopic = document.getElementById("videopic")
+
 
 document.getElementById("title-btn").addEventListener("click", function () {
     enableScroll()
@@ -112,12 +114,15 @@ document.getElementById("title-btn").addEventListener("click", function () {
         //     disableScroll()
         // }, 1500);
         videoInit.play()
+        setTimeout(()=>{
+            videopic.style.width = videoInit.offsetWidth + "px"
+        }, 100)
     }, 500)
 })
 
 videoInit.onended = function () {
     enableScroll()
-    document.getElementById("videopic").style.display = "block";
+    videopic.style.opacity = "1";
     videoInit.src = "./res1/vid_loop.mp4"
     videoInit.play()
     videoInit.loop = true

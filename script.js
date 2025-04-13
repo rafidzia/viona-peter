@@ -101,6 +101,7 @@ toggle.addEventListener("click", function () {
 
 
 const videoInit = document.getElementById("video1")
+const videoLoop = document.getElementById("video2")
 const videopic = document.getElementById("videopic")
 
 
@@ -123,9 +124,10 @@ document.getElementById("title-btn").addEventListener("click", function () {
 videoInit.onended = function () {
     enableScroll()
     videopic.style.opacity = "1";
-    videoInit.src = "./res1/vid_loop.mp4"
-    videoInit.play()
-    videoInit.loop = true
+    videoInit.style.display = "none"
+    // videoInit.src = "./res1/vid_loop.mp4"
+    videoLoop.style.display = "block"
+    videoLoop.play()
     setTimeout(() => {
         if (frame.scrollTop < window.innerHeight + 100) {
             frame.scrollTo(0, frame.scrollTop + 100);

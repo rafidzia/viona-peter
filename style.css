@@ -419,7 +419,7 @@ button {
 }
 
 
-#video1 {
+#video1, #video2 {
     position: fixed;
     top:0;
     height: 100%;

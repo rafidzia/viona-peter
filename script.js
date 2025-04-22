@@ -115,25 +115,28 @@ document.getElementById("title-btn").addEventListener("click", function () {
         //     disableScroll()
         // }, 1500);
         videoInit.play()
-        setTimeout(()=>{
-            videopic.style.width = videoInit.offsetWidth + "px"
-        }, 100)
+        setTimeout(() => {
+            videoInit.pause()
+        }, 13500)
+        // setTimeout(()=>{
+        //     videopic.style.width = videoInit.offsetWidth + "px"
+        // }, 100)
     }, 500)
 })
 
-videoInit.onended = function () {
-    enableScroll()
-    videopic.style.opacity = "1";
-    videoInit.style.display = "none"
-    // videoInit.src = "./res1/vid_loop.mp4"
-    videoLoop.style.display = "block"
-    videoLoop.play()
-    setTimeout(() => {
-        if (frame.scrollTop < window.innerHeight + 100) {
-            frame.scrollTo(0, frame.scrollTop + 100);
-        }
-    }, 1500)
-}
+// videoInit.onended = function () {
+//     enableScroll()
+//     videopic.style.opacity = "1";
+//     videoInit.style.display = "none"
+//     // videoInit.src = "./res1/vid_loop.mp4"
+//     videoLoop.style.display = "block"
+//     videoLoop.play()
+//     setTimeout(() => {
+//         if (frame.scrollTop < window.innerHeight + 100) {
+//             frame.scrollTo(0, frame.scrollTop + 100);
+//         }
+//     }, 1500)
+// }
 
 
 

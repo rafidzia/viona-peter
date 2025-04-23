@@ -117,7 +117,7 @@ document.getElementById("title-btn").addEventListener("click", function () {
         videoInit.play()
         setTimeout(() => {
             videoInit.pause()
-        }, 13500)
+        }, 14000)
         // setTimeout(()=>{
         //     videopic.style.width = videoInit.offsetWidth + "px"
         // }, 100)

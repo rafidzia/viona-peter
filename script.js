@@ -108,7 +108,7 @@ const videopic = document.getElementById("videopic")
 document.getElementById("title-btn").addEventListener("click", function () {
     enableScroll()
     audio.play()
-    requestFullScreen(frame);
+    // requestFullScreen(frame);
     setTimeout(() => {
         frame.scrollTo(0, window.innerHeight);
         // setTimeout(() => {
@@ -117,7 +117,7 @@ document.getElementById("title-btn").addEventListener("click", function () {
         videoInit.play()
         setTimeout(() => {
             videoInit.pause()
-        }, 14000)
+        }, 14500)
         // setTimeout(()=>{
         //     videopic.style.width = videoInit.offsetWidth + "px"
         // }, 100)

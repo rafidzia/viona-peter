@@ -1,4 +1,5 @@
 function countdown(date, cb) {
+    let x;
     function sets(){
         // Get today's date and time
         var now = new Date().getTime();
@@ -25,7 +26,7 @@ function countdown(date, cb) {
         }
     }
     sets()
-    setInterval(function () {
+    x = setInterval(function () {
         sets()
     }, 1000);
 }
